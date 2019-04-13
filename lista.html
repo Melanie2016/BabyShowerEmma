@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Invitacion</title>
+
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/new-age.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/new-age.css" rel="stylesheet">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+
+
+  <style type="text/css">
+    .features{
+      background: url("../img/piec.jpg");
+    }
+  </style>
+</head>
+
+<body id="page-top">
+
+
+
+  <section class="lista" id="lista" style="height: 90%;">
+    <div class="container h-100" style="height: 100px;">
+      <div class="row h-100" >
+          <div class="col-lg-12 my-auto" >
+            <div class="header-content mx-auto">
+             
+
+              <!-- Buascar como agrndar un select algo parecido a btn-lg-->
+            <select class="form-control selectpicker"  multiple="multiple" id="invitados" name="invitados">
+              <option selected="Seleccione" value=""   >Elegir invitado</option>
+              <option value="Debo">     Debora Pilelsky</option>
+              <option value="Ruben">    Ruben Minteguiga</option>
+              <option value="Abril">    Abril Castillo</option>
+              <option value="Franco">   Franco Castillo</option>
+              <option value="Valen">    Valentina Castillo</option>
+              <option value="Martin">   Martin Minteguiga</option>
+              <option value="Malba">    Malba Pilelsky</option>
+              <option value="Fernando"> Fernando Rainieri</option>
+              <option value="Simon">    Simon Rainieri</option>
+              <option value="Jona">     Jonathan Pilelsky</option>
+              <option value="Ivana">    Ivana Melo</option>
+              <option value="Tati">     Tatiana Pilelsky</option>
+              <option value="Thiago">   Thiago Vera</option>
+              <option value="Brenda">   Brenda Pilelsky</option>
+              <option value="Zoe">      Zoe Pilelsky</option>
+              <option value="Mel">      Melanie Lugones</option>
+              <option value="Lucas">    Lucas Lopez</option>
+              <option value="Santi">    Santiago Strinatti</option>
+              <option value="Mariana">  Mariana Benicio y flia</option>
+              <option value="Flor">     Florencia Piechoki</option>
+              <option value="Martu">    Martina Piechoki</option>
+              <option value="Beto">     Beto Carando</option>
+              <option value="Nora">     Nora Ponce</option>
+              <option value="Cintia">   Cintia Silva</option>
+              <option value="Lucas">    Lucas Quintana</option>
+              <option value="Luciana">  Luciana Maidana </option>
+              <option value="Jael">     Jael Berchot </option> 
+              <option value="Victor">   Victor Perez </option>
+              <option value="Gabriela"> Gabriela Mendez </option>
+              <option value="Hernan">   Hernan Salinas</option>
+
+              
+            </select>
+
+          </div>
+          <br><br>
+          <button class=" form-control btn" onclick="ShowSelected()" style="background-color: #FFB7D9">Enviar</button>
+          <br><br>
+          <a href="index.html"><button class=" form-control btn" style="background-color: #FFB7D9">Volver</button></a>
+          
+        </div>
+      </div>  
+    </div>
+
+   
+    
+  </section>
+
+
+ 
+  <footer>
+    <div class="container">
+      <p>&copy; Your Website 2019. All Rights Reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">Terms</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/new-age.min.js"></script>
+
+
+
+
+  <script type="text/javascript">
+              function ShowSelected()
+              {
+                var values = $('#invitados').val();
+                //console.log(values);
+
+                window.open('https://api.whatsapp.com/send?l=es&phone=541168226984&text=Hola Mel, confirmo la asistencia de : '+values, '_blank');
+
+                /*
+                var data=[];
+                var $el=$("#invitados");
+                $el.find('option:selected').each(function(){
+                    data.push({m:$(this).val()});
+                    window.open('https://api.whatsapp.com/send?l=es&phone=541168226984&text=Hola Isa. Confirmo la asistencia de :'+data, '_blank');
+                }); 
+                console.log(data) */
+
+
+
+
+
+                /*
+                if(data == null || data == ''){
+                   alert('Para continuar es necesario que seleccione una especialidad  ¡GRACIAS!');
+                }else{
+                  window.open('https://api.whatsapp.com/send?l=es&phone=541168226984&text=Hola Isa. Confirmo la asistencia de :'+data, '_blank');
+                }*/
+                
+         
+ 
+
+
+
+              /* Para obtener el valor */
+
+              /*
+              var cod = document.getElementById("invitados").value;
+                if(cod == null || cod == 0){
+                  alert('Para continuar es necesario que seleccione una especialidad  ¡GRACIAS!');
+                }
+                else{
+                   window.open('https://api.whatsapp.com/send?l=es&phone=541168226984&text=Hola Isa. Confirmo la asistencia de :'+cod, '_blank');
+                }
+
+                */
+                
+              
+              
+              /* Para obtener el texto 
+              var combo = document.getElementById("producto");
+              var selected = combo.options[combo.selectedIndex].text;
+              alert(selected); */
+              
+              };
+    </script>
+</body>
+
+</html>
